@@ -1,0 +1,11 @@
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\bin\Debug\netcoreapp2.0\ResourceServer1.deps.json
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\bin\Debug\netcoreapp2.0\ResourceServer1.runtimeconfig.json
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\bin\Debug\netcoreapp2.0\ResourceServer1.runtimeconfig.dev.json
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\bin\Debug\netcoreapp2.0\ResourceServer1.dll
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\bin\Debug\netcoreapp2.0\ResourceServer1.pdb
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.dll
+C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\ResourceServer1\obj\Debug\netcoreapp2.0\ResourceServer1.pdb
