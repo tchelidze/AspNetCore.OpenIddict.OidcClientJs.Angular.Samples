@@ -12542,11 +12542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\AngularJsApp.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\AngularJsApp.csproj",
       "projectName": "AngularJsApp",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\AngularJsApp.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\AngularJsApp.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AngularJsApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

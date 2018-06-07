@@ -1,5 +1,5 @@
 {
-  "name": "bower simon",
+  "name": "bower_simon",
   "dependencies": {
     "angular": "1.6.9",
     "angular-ui-router": "1.0.15",

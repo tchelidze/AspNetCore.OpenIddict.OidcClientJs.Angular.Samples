@@ -9,3 +9,14 @@ C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\An
 C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.dll
 C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.pdb
 C:\Users\ASUS\source\repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\bin\Debug\netcoreapp2.0\AngularJsApp.deps.json
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\bin\Debug\netcoreapp2.0\AngularJsApp.runtimeconfig.json
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\bin\Debug\netcoreapp2.0\AngularJsApp.runtimeconfig.dev.json
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\bin\Debug\netcoreapp2.0\AngularJsApp.dll
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\bin\Debug\netcoreapp2.0\AngularJsApp.pdb
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.AssemblyInfoInputs.cache
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.AssemblyInfo.cs
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.dll
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.pdb

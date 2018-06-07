@@ -1,7 +1,2 @@
-var templatingApp;
-(
-    function () {
-        'use strict';
-        templatingApp = angular.module('templating_app', ['ui.router']);
-    }
-)();
+"use strict";
+var app = angular.module('oidc_client_js_demo_app', ['ui.router']); 

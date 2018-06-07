@@ -1,4 +1,5 @@
-templatingApp.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', '$compileProvider',
+app.config([
+    "$locationProvider", "$stateProvider", "$urlRouterProvider", "$urlMatcherFactoryProvider", "$compileProvider",
     function ($locationProvider, $stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $compileProvider) {
 
         //console.log('Appt.Main is now running')
@@ -6,32 +7,31 @@ templatingApp.config(['$locationProvider', '$stateProvider', '$urlRouterProvider
             $locationProvider.html5Mode({
                 enabled: true,
                 requireBase: true
-            }).hashPrefix('!');
+            }).hashPrefix("!");
         };
         $urlMatcherFactoryProvider.strictMode(false);
         $compileProvider.debugInfoEnabled(false);
 
         $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: './views/home/home.html',
-                controller: 'HomeController'
+            .state("protectedresource",
+            {
+                url: "/protectedresource",
+                templateUrl: "./views/protectedresource/protectedresource.html",
+                controller: "ProtectedResourceController"
             })
-            .state('dashboard', {
-                url: '/dashboard',
-                templateUrl: './views/home/home.html',
-                controller: 'HomeController'
+            .state("login",
+            {
+                url: "/login",
+                templateUrl: "./views/login/login.html",
+                controller: "LoginController"
             })
-            .state('user', {
-                url: '/user',
-                templateUrl: './views/user/user.html',
-                controller: 'UserController'
-            })
-            .state('about', {
-                url: '/about',
-                templateUrl: './views/about/about.html',
-                controller: 'AboutController'
+            .state("user",
+            {
+                url: "/user",
+                templateUrl: "./views/user/user.html",
+                controller: "UserController"
             });
 
-        $urlRouterProvider.otherwise('/home');
-    }]); 
+        $urlRouterProvider.otherwise("/home");
+    }
+]);

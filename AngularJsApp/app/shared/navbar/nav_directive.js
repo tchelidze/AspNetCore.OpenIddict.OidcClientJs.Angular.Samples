@@ -1,5 +1,5 @@
 
-templatingApp.directive("navbarMenu", function () {
+app.directive("navbarMenu", function () {
     return {
         restrict: 'E',
         templateUrl: 'views/shared/navbar/nav.html'

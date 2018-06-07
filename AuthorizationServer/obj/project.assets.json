@@ -12779,11 +12779,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\AuthorizationServer.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\AuthorizationServer.csproj",
       "projectName": "AuthorizationServer",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\AuthorizationServer.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\AuthorizationServer.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Repos\\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\\AuthorizationServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

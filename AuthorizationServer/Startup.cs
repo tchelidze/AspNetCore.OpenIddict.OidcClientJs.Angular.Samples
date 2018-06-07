@@ -83,7 +83,7 @@ namespace AuthorizationServer
             app.UseCors(builder =>
             {
                 // Allow request from Client's origin.
-                builder.WithOrigins("http://localhost:4321");
+                builder.WithOrigins("http://localhost:1144");
                 builder.WithMethods("GET");
                 builder.WithHeaders("Authorization");
             });
