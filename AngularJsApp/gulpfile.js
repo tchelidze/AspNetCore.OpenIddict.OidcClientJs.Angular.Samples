@@ -82,8 +82,8 @@ gulp.task("run", ["copy-all", "build-all"]);
 
 gulp.task('watch', function () {
 
-    gulp.watch('./app/**/*.js', ['run']);
-    gulp.watch('./app/**/*.html', ['run']);
+    gulp.watch('./app/**/*.js', ['build-all']);
+    gulp.watch('./app/**/*.html', ['build-all']);
 });
 
 //Build End

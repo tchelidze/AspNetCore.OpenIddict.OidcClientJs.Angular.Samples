@@ -21,7 +21,7 @@ namespace AuthorizationServer.Controllers
     {
         private readonly IdentityOptions _identityOptions;
         private readonly OpenIddictOptions _openIddictOptions;
-        private readonly OpenIddictScopeManager<OpenIddictScope<string>> _scopeManager;
+        private readonly OpenIddictScopeManager<OpenIddictScope> _scopeManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
 
@@ -30,7 +30,7 @@ namespace AuthorizationServer.Controllers
             IOptionsSnapshot<OpenIddictOptions> openIddictOptions,
             SignInManager<IdentityUser> signInManager,
             IOptions<IdentityOptions> identityOptions,
-            OpenIddictScopeManager<OpenIddictScope<string>> scopeManager)
+            OpenIddictScopeManager<OpenIddictScope> scopeManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

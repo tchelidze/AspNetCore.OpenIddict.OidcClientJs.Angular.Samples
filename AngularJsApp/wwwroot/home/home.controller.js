@@ -1,1 +1,0 @@
-templatingApp.controller("HomeController",["$scope",function(e){e.message="Welcome to ASP.NET Core!"}]);

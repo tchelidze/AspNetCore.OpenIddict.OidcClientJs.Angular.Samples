@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using OpenIddict.Core;
 using OpenIddict.Models;
@@ -15,13 +16,40 @@ namespace AuthorizationServer.Auth
             {
                 SeedApplications(scope);
                 SeedScopes(scope);
+                SeedUsers(scope);
             }
+        }
+
+        private static void SeedUsers(IServiceScope scope)
+        {
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            userManager.DeleteAsync(userManager.FindByEmailAsync("bubachelidze1@gmail.com").Result).Wait();
+
+            new List<IdentityUser>
+                {
+                    new IdentityUser
+                    {
+                        Email = "bubachelidze1@gmail.com",
+                        UserName = "bubachelidze1@gmail.com",
+                        EmailConfirmed = true,
+                    }
+                }
+                .Where(it => userManager.FindByEmailAsync(it.Email).Result == null)
+                .ToList()
+                .ForEach(it =>
+                {
+                    userManager.CreateAsync(it).Wait();
+                    var newUser = userManager.FindByEmailAsync(it.Email).Result;
+                    userManager.AddPasswordAsync(newUser, "Asd!23").Wait();
+                });
+            ;
         }
 
         private static void SeedApplications(IServiceScope scope)
         {
-            var manager =
-                scope.ServiceProvider.GetRequiredService<OpenIddictApplicationManager<OpenIddictApplication>>();
+            var manager = scope.ServiceProvider.GetRequiredService<OpenIddictApplicationManager<OpenIddictApplication>>();
+
+            manager.DeleteAsync(manager.FindByClientIdAsync("angularjs-client").Result).Wait();
 
             new List<OpenIddictApplicationDescriptor>
                 {
@@ -29,8 +57,8 @@ namespace AuthorizationServer.Auth
                     {
                         ClientId = "angularjs-client",
                         DisplayName = "AngularJs Client",
-                        PostLogoutRedirectUris = {new Uri("http://localhost:4321/signout-oidc")},
-                        RedirectUris = {new Uri("http://localhost:9000/signin-oidc")},
+                        PostLogoutRedirectUris = {new Uri("http://localhost:7222/signout-oidc")},
+                        RedirectUris = {new Uri("http://localhost:7222/signin-oidc") },
                         Permissions =
                         {
                             OpenIddictConstants.Permissions.Endpoints.Authorization,

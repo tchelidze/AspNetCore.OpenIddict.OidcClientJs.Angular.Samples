@@ -31,6 +31,12 @@ namespace AuthorizationServer.Controllers
         {
             ViewData["ReturnUrl"] = returnUrl;
 
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
 
             if (result.Succeeded)
@@ -38,7 +44,10 @@ namespace AuthorizationServer.Controllers
                 return RedirectToLocal(returnUrl);
             }
 
-            /*todo handle IsLockedOut and RequiresTwoFactor results.*/
+            if (result.IsLockedOut)
+            {
+                return View("Lockout");
+            }
 
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(model);

@@ -21,7 +21,7 @@ namespace ResourceServer1
                 })
                 .AddOAuthIntrospection(options =>
                 {
-                    options.Authority = new Uri("http://localhost:1302/");
+                    options.Authority = new Uri("http://localhost:7111/");
                     options.Audiences.Add("ResourceServer1");
                     options.ClientId = "ResourceServer1";
                     options.ClientSecret = "b7a497c7-02b2-4705-a11f-b1f310d5ddaa";
@@ -36,7 +36,7 @@ namespace ResourceServer1
             app.UseCors(builder =>
             {
                 /*todo client's domain*/
-                builder.WithOrigins("http://localhost:");
+                builder.WithOrigins("http://localhost:7222");
                 builder.WithMethods("GET");
                 builder.WithHeaders("Authorization");
             });
