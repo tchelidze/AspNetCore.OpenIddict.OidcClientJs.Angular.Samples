@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AuthorizationServer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using OpenIddict.Core;
@@ -22,12 +23,12 @@ namespace AuthorizationServer.Auth
 
         private static void SeedUsers(IServiceScope scope)
         {
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            userManager.DeleteAsync(userManager.FindByEmailAsync("bubachelidze1@gmail.com").Result).Wait();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+//            userManager.DeleteAsync(userManager.FindByEmailAsync("bubachelidze1@gmail.com").Result).Wait();
 
-            new List<IdentityUser>
+            new List<User>
                 {
-                    new IdentityUser
+                    new User 
                     {
                         Email = "bubachelidze1@gmail.com",
                         UserName = "bubachelidze1@gmail.com",
@@ -49,7 +50,7 @@ namespace AuthorizationServer.Auth
         {
             var manager = scope.ServiceProvider.GetRequiredService<OpenIddictApplicationManager<OpenIddictApplication>>();
 
-            manager.DeleteAsync(manager.FindByClientIdAsync("angularjs-client").Result).Wait();
+//            manager.DeleteAsync(manager.FindByClientIdAsync("angularjs-client").Result).Wait();
 
             new List<OpenIddictApplicationDescriptor>
                 {

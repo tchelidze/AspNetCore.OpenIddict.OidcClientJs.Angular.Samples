@@ -1,6 +1,7 @@
 using AspNet.Security.OpenIdConnect.Primitives;
 using AuthorizationServer.Auth;
 using AuthorizationServer.Data;
+using AuthorizationServer.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -27,7 +28,7 @@ namespace AuthorizationServer
                 });
 
             services
-                .AddIdentity<IdentityUser, IdentityRole>()
+                .AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AuthorizationServerDbContext>();
 
             services.Configure<IdentityOptions>(options =>
@@ -75,6 +76,8 @@ namespace AuthorizationServer
             services
                 .AddCors();
 
+            services.AddAntiforgery();
+
             services.AddMvc();
         }
 
@@ -83,7 +86,7 @@ namespace AuthorizationServer
             app.UseCors(builder =>
             {
                 // Allow request from Client's origin.
-                builder.WithOrigins("http://localhost:1144");
+                builder.WithOrigins("http://localhost:7222");
                 builder.WithMethods("GET");
                 builder.WithHeaders("Authorization");
             });

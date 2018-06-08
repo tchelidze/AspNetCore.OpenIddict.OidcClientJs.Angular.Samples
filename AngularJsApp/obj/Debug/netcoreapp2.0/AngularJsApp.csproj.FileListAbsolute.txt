@@ -19,3 +19,4 @@ C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJs
 C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.AssemblyInfo.cs
 C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.dll
 C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.pdb
+C:\Users\ASUS\Repos\AspNetCore.OpenIdDict.OidcClientJs.Angular.Samples\AngularJsApp\obj\Debug\netcoreapp2.0\AngularJsApp.csprojResolveAssemblyReference.cache

@@ -1,5 +1,5 @@
-app.controller('SignInOidcController', [
-  function() {
-    console.log('active');
-  }
-]);
+app.controller('SignInOidcController', ['$scope','authService', function ($scope,authService) {
+    $scope.getUser = function () {
+        authService.getUser();
+    };
+}]);

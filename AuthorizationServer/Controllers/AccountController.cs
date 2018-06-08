@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using AuthorizationServer.Entities;
 using AuthorizationServer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -9,12 +10,9 @@ namespace AuthorizationServer.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public AccountController(SignInManager<IdentityUser> signInManager)
-        {
-            _signInManager = signInManager;
-        }
+        public AccountController(SignInManager<User> signInManager) => _signInManager = signInManager;
 
         [HttpGet]
         [AllowAnonymous]
@@ -35,7 +33,6 @@ namespace AuthorizationServer.Controllers
             {
                 return View(model);
             }
-
 
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
 

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using AspNet.Security.OpenIdConnect.Extensions;
 using AspNet.Security.OpenIdConnect.Primitives;
 using AspNet.Security.OpenIdConnect.Server;
+using AuthorizationServer.Data;
+using AuthorizationServer.Entities;
 using AuthorizationServer.Models.Shared;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -22,19 +24,22 @@ namespace AuthorizationServer.Controllers
         private readonly IdentityOptions _identityOptions;
         private readonly OpenIddictOptions _openIddictOptions;
         private readonly OpenIddictScopeManager<OpenIddictScope> _scopeManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly AuthorizationServerDbContext _context;
 
         public AuthorizationController(
-            UserManager<IdentityUser> userManager,
+            UserManager<User> userManager,
             IOptionsSnapshot<OpenIddictOptions> openIddictOptions,
-            SignInManager<IdentityUser> signInManager,
+            SignInManager<User> signInManager,
             IOptions<IdentityOptions> identityOptions,
-            OpenIddictScopeManager<OpenIddictScope> scopeManager)
+            OpenIddictScopeManager<OpenIddictScope> scopeManager,
+            AuthorizationServerDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _scopeManager = scopeManager;
+            _context = context;
             _identityOptions = identityOptions.Value;
             _openIddictOptions = openIddictOptions.Get(OpenIdConnectServerDefaults.AuthenticationScheme);
         }
@@ -85,7 +90,7 @@ namespace AuthorizationServer.Controllers
 
         private async Task<AuthenticationTicket> CreateTicketAsync(
             OpenIdConnectRequest request,
-            IdentityUser user,
+            User user,
             AuthenticationProperties authenticationProperties = null)
         {
             var scopes = _openIddictOptions
@@ -107,7 +112,7 @@ namespace AuthorizationServer.Controllers
             return ticket;
         }
 
-        public async Task<ClaimsIdentity> CreateIdentityFromUserAsync(IdentityUser user, IReadOnlyList<string> scopes)
+        public async Task<ClaimsIdentity> CreateIdentityFromUserAsync(User user, IReadOnlyList<string> scopes)
         {
             var principal = await _signInManager.CreateUserPrincipalAsync(user);
             var identity = (ClaimsIdentity)principal.Identity;
