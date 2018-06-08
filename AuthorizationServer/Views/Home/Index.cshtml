@@ -1,1 +1,20 @@
-﻿Home
+﻿<div class="row">
+    <div class="col-md-8">
+        IsAuthenticated : @User.Identity.IsAuthenticated
+    </div>
+
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="Account" asp-action="Login">Login</a>
+    }
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="col-md-8">
+            UserName : @User.Identity.Name
+        </div>
+        <form asp-controller="Account" asp-action="LogOut">
+            <button type="submit">Logout</button>
+        </form>
+    }
+</div>
